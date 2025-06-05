@@ -27,7 +27,7 @@ const Sidebar = () => {
         Kendo2
       </NavLink>
       <NavLink to="/kendo2" style={linkStyle}>
-        Kendo2
+        Kendo3
       </NavLink>
     </nav>
   );
