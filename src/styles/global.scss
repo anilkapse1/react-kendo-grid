@@ -1,0 +1,22 @@
+@import './variables';
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+a {
+  text-decoration: none;
+  color: $link-color;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+h1, h2, h3 {
+  margin: 0;
+  color: $primary-color;
+}
