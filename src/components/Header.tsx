@@ -2,8 +2,8 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <header style={{ background: '#61dafb', padding: '1rem' }}>
-      <h1>Header Section</h1>
+    <header style={{ background: 'rgb(34 66 75)', padding: '1rem' }}>
+      <h1>Kendo Grid</h1>
     </header>
   );
 };
