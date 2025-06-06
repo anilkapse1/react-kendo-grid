@@ -12,7 +12,6 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <Kendo1 /> }, 
       { path: "kendo1", element: <Kendo2 /> },
-      { path: "kendo2", element: <Kendo3 /> },
     ],
   },
 ]);
