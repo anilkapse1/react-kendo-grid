@@ -26,6 +26,7 @@ function Example3() {
         skip={skip}
         pageable={{ buttonCount: 5, pageSizes: true, pageSize }}
         onPageChange={handlePageChange}
+        style={{ height: "400px" }}
       >
         <GridToolbar>
           <strong>KendoReact Grid - Pagination</strong>

@@ -58,7 +58,7 @@ const Example10: React.FC = () => {
 
   return (
     <div style={{ padding: 20 }}>
-      <Grid data={data} style={{ height: "auto" }}>
+      <Grid data={data} style={{ height: "400px" }}>
         <GridToolbar>
           <strong>KendoReact Grid - Inline & Popup Editing</strong>
         </GridToolbar>

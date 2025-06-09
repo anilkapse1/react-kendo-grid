@@ -6,7 +6,7 @@ import productData from "./../../data/products.json";
 function Example1() {
   return (
     <div style={{ padding: 20 }}>
-      <Grid data={productData as Product[]}>
+      <Grid data={productData as Product[]} style={{ height: "400px" }}>
         <GridToolbar>
           <strong>KendoReact Grid - Basic Example</strong>
         </GridToolbar>

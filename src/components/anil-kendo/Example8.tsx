@@ -92,7 +92,7 @@ const Example8 = () => {
           onPageChange={handlePageChange}
           onSortChange={handleSortChange}
           onFilterChange={handleFilterChange}
-          style={{}}
+          style={{ height: "400px" }}
         >
           <Column field="id" title="ID" width="80px" filter="numeric" />
           <Column field="title" title="Title" filter="text" />
