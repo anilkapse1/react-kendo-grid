@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Grid, GridColumn as Column, type GridSelectionChangeEvent } from "@progress/kendo-react-grid";
+import { Grid, GridColumn as Column, type GridSelectionChangeEvent, GridToolbar } from "@progress/kendo-react-grid";
 import type { Product } from "../../model/IGrid";
 import productData from "../../data/products.json";
 
@@ -26,7 +26,6 @@ const Example4 = () => {
 
   return (
     <div style={{ padding: 20 }}>
-      <h2>Grid - Cell selection</h2>
       <Grid
         style={{ height: "400px" }}
         data={dataWithSelection}
@@ -39,6 +38,9 @@ const Example4 = () => {
         }}
         onSelectionChange={onSelectionChange}
       >
+        <GridToolbar>
+          <strong>KendoReact Grid - Cell selection</strong>
+        </GridToolbar>
         <Column field="id" title="ID" width="80px" selectedField="id_selected" />
         <Column field="name" title="Product Name" selectedField="name_selected" />
         <Column field="price" title="Price ($)" selectedField="price_selected" />

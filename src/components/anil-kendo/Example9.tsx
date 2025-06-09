@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Grid, GridColumn as Column } from "@progress/kendo-react-grid";
+import { Grid, GridColumn as Column, GridToolbar } from "@progress/kendo-react-grid";
 import type { GridPageChangeEvent, GridSortChangeEvent, GridFilterChangeEvent } from "@progress/kendo-react-grid";
 import { orderBy, filterBy } from "@progress/kendo-data-query";
 import type { CompositeFilterDescriptor } from "@progress/kendo-data-query";
@@ -78,14 +78,6 @@ const Example9 = () => {
 
   return (
     <div style={{ padding: 20 }}>
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <h2>Grid - (Paging + Sorting + Filtering + Excel Export)</h2>
-
-        <button onClick={handleExport} style={{ marginLeft: "auto" }}>
-          ⬇️ Export to Excel
-        </button>
-      </div>
-
       {loading ? (
         <p>Loading...</p>
       ) : (
@@ -104,6 +96,13 @@ const Example9 = () => {
             onSortChange={handleSortChange}
             onFilterChange={handleFilterChange}
           >
+            <GridToolbar>
+              <strong>KendoReact Grid - Paging + Sorting + Filtering + Excel Export</strong>
+              <button onClick={handleExport} style={{ marginLeft: "auto" }}>
+                ⬇️ Export to Excel
+              </button>
+            </GridToolbar>
+
             <Column field="id" title="ID" width="80px" filter="numeric" />
             <Column field="title" title="Title" filter="text" />
             <Column field="category" title="Category" filter="text" />

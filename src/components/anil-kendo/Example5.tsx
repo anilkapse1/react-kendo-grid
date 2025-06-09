@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Grid, GridColumn as Column, GridColumn } from "@progress/kendo-react-grid";
+import { Grid, GridColumn as Column, GridColumn, GridToolbar } from "@progress/kendo-react-grid";
 import type { Product } from "../../model/IGrid";
 import productData from "../../data/products.json";
 
@@ -13,7 +13,6 @@ const Example5 = () => {
   };
   return (
     <div style={{ padding: 20 }}>
-      <h2>Grid - Row selection</h2>
       <Grid
         style={{ height: "400px" }}
         data={productData.map((item) => ({
@@ -30,6 +29,10 @@ const Example5 = () => {
         navigatable={true}
         onRowClick={onRowClick}
       >
+        <GridToolbar>
+          <strong>KendoReact Grid - Row selection</strong>
+        </GridToolbar>
+
         <GridColumn field="id" title="ID" width="80px" />
         <GridColumn field="name" title="Product Name" />
         <GridColumn field="price" title="Price ($)" />

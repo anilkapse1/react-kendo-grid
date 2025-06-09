@@ -57,10 +57,10 @@ const Example10: React.FC = () => {
   };
 
   return (
-    <>
+    <div style={{ padding: 20 }}>
       <Grid data={data} style={{ height: "auto" }}>
         <GridToolbar>
-          <strong>KendoReact Grid - Inline &amp; Popup Editing</strong>
+          <strong>KendoReact Grid - Inline & Popup Editing</strong>
         </GridToolbar>
 
         <Column field="id" title="ID" width="60px" />
@@ -174,7 +174,7 @@ const Example10: React.FC = () => {
           </DialogActionsBar>
         </Dialog>
       )}
-    </>
+    </div>
   );
 };
 

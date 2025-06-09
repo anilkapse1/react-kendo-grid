@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Grid, GridColumn as Column } from "@progress/kendo-react-grid";
+import { Grid, GridColumn as Column, GridToolbar } from "@progress/kendo-react-grid";
 import type { GridPageChangeEvent, GridSortChangeEvent, GridFilterChangeEvent } from "@progress/kendo-react-grid";
 import { orderBy, filterBy } from "@progress/kendo-data-query";
 import type { CompositeFilterDescriptor } from "@progress/kendo-data-query";
@@ -72,7 +72,10 @@ const Example8 = () => {
 
   return (
     <div style={{ padding: 20 }}>
-      <h2>Grid - (Server-Side Paging + Sorting+ Filtering)</h2>
+      <GridToolbar>
+        <strong>KendoReact Grid - Server-Side Paging + Sorting+ Filtering</strong>
+      </GridToolbar>
+
       {loading ? (
         <p>Loading...</p>
       ) : (
