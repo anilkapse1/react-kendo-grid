@@ -72,7 +72,7 @@ const Example8 = () => {
 
   return (
     <div style={{ padding: 20 }}>
-      <h2>Grid - (Server-Side Paging + Sorting)</h2>
+      <h2>Grid - (Server-Side Paging + Sorting+ Filtering)</h2>
       {loading ? (
         <p>Loading...</p>
       ) : (
