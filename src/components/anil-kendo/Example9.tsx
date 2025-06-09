@@ -95,6 +95,7 @@ const Example9 = () => {
             onPageChange={handlePageChange}
             onSortChange={handleSortChange}
             onFilterChange={handleFilterChange}
+            style={{ height: "400px" }}
           >
             <GridToolbar>
               <strong>KendoReact Grid - Paging + Sorting + Filtering + Excel Export</strong>

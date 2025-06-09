@@ -23,7 +23,7 @@ const Example5 = () => {
         dataItemKey={DATA_ITEM_KEY}
         selectable={{
           enabled: true,
-          mode: "single",
+          mode: "multiple",
         }}
         defaultSelect={{ 2: true }}
         navigatable={true}

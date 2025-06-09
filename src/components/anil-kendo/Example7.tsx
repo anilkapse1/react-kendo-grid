@@ -72,7 +72,7 @@ const Example7 = () => {
           sort={sort}
           onPageChange={handlePageChange}
           onSortChange={handleSortChange}
-          style={{}}
+          style={{ height: "400px" }}
         >
           <GridToolbar>
             <strong>KendoReact Grid - Server-Side Paging + Sorting</strong>

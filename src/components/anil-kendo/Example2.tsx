@@ -48,6 +48,7 @@ function Example2() {
         filterable={true}
         filter={filter}
         onFilterChange={handleFilterChange}
+        style={{ height: "400px" }}
       >
         <GridToolbar>
           <strong>KendoReact Grid - Sorting and Filtering</strong>
