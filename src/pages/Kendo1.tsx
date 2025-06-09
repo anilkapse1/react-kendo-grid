@@ -9,6 +9,7 @@ import Example6 from "../components/anil-kendo/Example6";
 import Example7 from "../components/anil-kendo/Example7";
 import Example8 from "../components/anil-kendo/Example8";
 import Example9 from "../components/anil-kendo/Example9";
+import Example10 from "../components/anil-kendo/Example10";
 
 const Kendo1 = () => {
   const [selected, setSelected] = useState(0);
@@ -42,6 +43,9 @@ const Kendo1 = () => {
         </TabStripTab>
         <TabStripTab title="Example9">
           <Example9 />
+        </TabStripTab>
+        <TabStripTab title="Example10">
+          <Example10 />
         </TabStripTab>
       </TabStrip>
     </div>
