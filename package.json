@@ -13,6 +13,7 @@
     "@progress/kendo-data-query": "^1.7.1",
     "@progress/kendo-licensing": "^1.6.0",
     "@progress/kendo-react-buttons": "^11.1.0",
+    "@progress/kendo-react-dropdowns": "^11.1.0",
     "@progress/kendo-react-grid": "^11.1.0",
     "@progress/kendo-react-intl": "^11.1.0",
     "@progress/kendo-react-layout": "^11.1.0",
