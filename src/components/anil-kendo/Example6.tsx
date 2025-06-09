@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, GridColumn as Column } from "@progress/kendo-react-grid";
+import { Grid, GridColumn as Column, GridToolbar } from "@progress/kendo-react-grid";
 import productData from "../../data/products.json";
 import type { GridCellProps } from "@progress/kendo-react-grid";
 
@@ -20,8 +20,10 @@ const Example6 = () => {
 
   return (
     <div style={{ padding: 20 }}>
-      <h2>Grid - Custom cell</h2>
       <Grid data={productData} style={{ height: "400px" }}>
+        <GridToolbar>
+          <strong>KendoReact Grid - Custom cell</strong>
+        </GridToolbar>
         <Column field="name" title="Name" />
         <Column field="status" title="Status" cells={{ data: StatusCell }} />
         <Column field="price" title="Price ($)" />

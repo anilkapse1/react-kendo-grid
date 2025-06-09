@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Grid, GridColumn as Column } from "@progress/kendo-react-grid";
+import { Grid, GridColumn as Column, GridToolbar } from "@progress/kendo-react-grid";
 import type { GridPageChangeEvent, GridSortChangeEvent } from "@progress/kendo-react-grid";
 import type { SortDescriptor } from "@progress/kendo-data-query";
 import axios from "axios";
@@ -59,7 +59,6 @@ const Example7 = () => {
 
   return (
     <div style={{ padding: 20 }}>
-      <h2>Grid - (Server-Side Paging + Sorting)</h2>
       {loading ? (
         <p>Loading...</p>
       ) : (
@@ -75,6 +74,10 @@ const Example7 = () => {
           onSortChange={handleSortChange}
           style={{}}
         >
+          <GridToolbar>
+            <strong>KendoReact Grid - Server-Side Paging + Sorting</strong>
+          </GridToolbar>
+
           <Column field="id" title="ID" width="80px" />
           <Column field="title" title="Title" />
           <Column field="category" title="Category" />
