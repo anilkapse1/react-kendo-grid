@@ -23,7 +23,7 @@ const Example12 = () => {
     <div style={{ padding: 20 }}>
       <Grid data={productData} scrollable="scrollable" style={{ height: "400px", width: "600px" }}>
         <GridToolbar>
-          <strong>KendoReact Grid – Locked column/ Column creation dynamically</strong>
+          <strong>dKendoReact Grid – Locked column/ Column creation dynamically</strong>
         </GridToolbar>
         {columnConfig.map((col) => (
           <Column key={col.field} field={col.field} title={col.title} width={col.width} locked={lockedFields.includes(col.field)} />
