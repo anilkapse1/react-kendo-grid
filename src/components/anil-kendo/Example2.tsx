@@ -10,15 +10,18 @@ function Example2() {
   const [filter, setFilter] = useState<CompositeFilterDescriptor | undefined>(undefined);
 
   const processedData = useMemo(() => {
-    let data = productData as Product[]; // Ensure productData is treated as Product[]
+    let data = [...(productData as Product[])]; // copy to avoid mutation
+
     if (filter) {
       data = filterBy(data, filter);
     }
-    if (sort.length > 0) {
+
+    if (sort && sort.length > 0) {
       data = orderBy(data, sort);
     }
+
     return data;
-  }, [productData, filter, sort]);
+  }, [filter, sort]);
 
   const handleSortChange = useCallback((e: GridSortChangeEvent) => {
     setSort(e.sort);
