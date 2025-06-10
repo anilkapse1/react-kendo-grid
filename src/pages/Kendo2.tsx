@@ -1,32 +1,42 @@
-import React, {useState} from 'react'
-import {Grid, GridColumn as Column} from "@progress/kendo-react-grid";
-import Cars from "../data/cars.json";
-import type { Car } from "../model/IGrid";
-
+import React, { useState } from "react";
+import { Menu, type MenuSelectEvent } from "@progress/kendo-react-layout";
+import Example1 from "../components/nagesh-kendo/Example1";
+import Example2 from "../components/nagesh-kendo/Example2";
+import Example3 from "../components/nagesh-kendo/Example3";
+import Example4 from "../components/nagesh-kendo/Example4";
+import Example5 from "../components/nagesh-kendo/Example5";
 
 const Kendo2 = () => {
+  const [selected, setSelected] = useState<string | null>(null);
 
-  const [data, setData]= useState<Array<Car>>(Cars);
+  const items = [
+    {
+      text: "Kendo Grid Examples",
+      items: [
+        { text: "Kendo Grid" },
+        { text: "Sorting and Filtring" },
+        { text: "Pagination" },
+        { text: "Cell selection" },
+        { text: "Row selection" },
+      ],
+    },
+  ];
+
+  const handleMenuSelect = (e: MenuSelectEvent) => {
+    const text = e.item.text;
+    setSelected(text ?? null);
+  };
 
   return (
-    <Grid
-    data={data}
-    autoProcessData={true}
-    sortable={true}
-    pageable={true}
-    editable={true}
-    filterable={true}
-    defaultSkip={0}
-    defaultTake={10}
-    >
-      <Column field="id" title="ID" ></Column>
-      <Column field="brand" title="Brand" ></Column>
-      <Column field="model" title="Model" ></Column>
-      <Column field="year" title="Year" ></Column>
-      <Column field="color" title="Coor" ></Column>
-      <Column field="price" title="Price" ></Column>
-    </Grid>
+    <div style={{ padding: 20 }}>
+      <Menu items={items} onSelect={handleMenuSelect} />
+      {selected === "Kendo Grid" && <Example1 />}
+      {selected === "Sorting and Filtring" && <Example2 />}
+      {selected === "Pagination" && <Example3 />}
+       {selected === "Cell selection" && <Example4 />}
+       {selected === "Row selection" && <Example5 />}
+    </div>
   );
 };
 
-export default Kendo2
+export default Kendo2;

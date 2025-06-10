@@ -47,7 +47,7 @@
     "color": "Silver",
     "price": 1200000
   }, {
-    "id": 1,
+    "id": 7,
     "brand": "Tata",
     "model": "Tiago",
     "year": 2021,
@@ -55,7 +55,7 @@
     "price": 800000
   },
   {
-    "id": 2,
+    "id": 8,
     "brand": "Toyota",
     "model": "Carmy",
     "year": 2023,
@@ -63,7 +63,7 @@
     "price": 1000000
   },
   {
-    "id": 3,
+    "id": 9,
     "brand": "Tesla",
     "model": "Tesla Model",
     "year": 2020,
@@ -71,7 +71,7 @@
     "price": 1500000
   },
   {
-    "id": 4,
+    "id": 10,
     "brand": "Honda",
     "model": "Civic",
     "year": 2021,
@@ -79,7 +79,7 @@
     "price": 600000
   },
   {
-    "id": 5,
+    "id": 11,
     "brand": "Ford",
     "model": "Mustag",
     "year": 2021,
@@ -87,7 +87,7 @@
     "price": 1200000
   },
   {
-    "id": 6,
+    "id": 12,
     "brand": "Hyundai",
     "model": "Creta",
     "year": 2023,
