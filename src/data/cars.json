@@ -1,0 +1,97 @@
+[
+  {
+    "id": 1,
+    "brand": "Tata",
+    "model": "Tiago",
+    "year": 2021,
+    "color": "Red",
+    "price": 800000
+  },
+  {
+    "id": 2,
+    "brand": "Toyota",
+    "model": "Carmy",
+    "year": 2023,
+    "color": "White",
+    "price": 1000000
+  },
+  {
+    "id": 3,
+    "brand": "Tesla",
+    "model": "Tesla Model",
+    "year": 2020,
+    "color": "Grey",
+    "price": 1500000
+  },
+  {
+    "id": 4,
+    "brand": "Honda",
+    "model": "Civic",
+    "year": 2021,
+    "color": "Black",
+    "price": 600000
+  },
+  {
+    "id": 5,
+    "brand": "Ford",
+    "model": "Mustag",
+    "year": 2021,
+    "color": "Blue",
+    "price": 1200000
+  },
+  {
+    "id": 6,
+    "brand": "Hyundai",
+    "model": "Creta",
+    "year": 2023,
+    "color": "Silver",
+    "price": 1200000
+  }, {
+    "id": 7,
+    "brand": "Tata",
+    "model": "Tiago",
+    "year": 2021,
+    "color": "Red",
+    "price": 800000
+  },
+  {
+    "id": 8,
+    "brand": "Toyota",
+    "model": "Carmy",
+    "year": 2023,
+    "color": "White",
+    "price": 1000000
+  },
+  {
+    "id": 9,
+    "brand": "Tesla",
+    "model": "Tesla Model",
+    "year": 2020,
+    "color": "Grey",
+    "price": 1500000
+  },
+  {
+    "id": 10,
+    "brand": "Honda",
+    "model": "Civic",
+    "year": 2021,
+    "color": "Black",
+    "price": 600000
+  },
+  {
+    "id": 11,
+    "brand": "Ford",
+    "model": "Mustag",
+    "year": 2021,
+    "color": "Blue",
+    "price": 1200000
+  },
+  {
+    "id": 12,
+    "brand": "Hyundai",
+    "model": "Creta",
+    "year": 2023,
+    "color": "Silver",
+    "price": 1200000
+  }
+]
