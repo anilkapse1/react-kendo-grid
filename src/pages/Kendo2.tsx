@@ -5,6 +5,7 @@ import Example2 from "../components/nagesh-kendo/Example2";
 import Example3 from "../components/nagesh-kendo/Example3";
 import Example4 from "../components/nagesh-kendo/Example4";
 import Example5 from "../components/nagesh-kendo/Example5";
+import Example6 from "../components/nagesh-kendo/Example6";
 
 const Kendo2 = () => {
   const [selected, setSelected] = useState<string | null>(null);
@@ -18,6 +19,7 @@ const Kendo2 = () => {
         { text: "Pagination" },
         { text: "Cell selection" },
         { text: "Row selection" },
+        { text: "Custom cell" },
       ],
     },
   ];
@@ -35,6 +37,7 @@ const Kendo2 = () => {
       {selected === "Pagination" && <Example3 />}
        {selected === "Cell selection" && <Example4 />}
        {selected === "Row selection" && <Example5 />}
+       {selected === "Custom cell" && <Example6 />}
     </div>
   );
 };
