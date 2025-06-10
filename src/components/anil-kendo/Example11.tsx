@@ -31,7 +31,7 @@ const Example11: React.FC = () => {
       <Grid
         data={dataState}
         dataItemKey={DATA_ITEM_KEY}
-        style={{ maxHeight: "600px" }}
+        style={{ maxHeight: "400px" }}
         selectable={{
           enabled: true,
           drag: false,
