@@ -4,7 +4,6 @@ export interface Product {
   price: number;
   category: string;
   status: string;
-  locked: string;
 }
 
 export interface Car {
