@@ -3,6 +3,8 @@ export interface Product {
   name: string;
   price: number;
   category: string;
+  status: string;
+  locked: string;
 }
 
 export interface Car {
@@ -13,5 +15,3 @@ export interface Car {
   color: string;
   price: number;
 }
-
-
