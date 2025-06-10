@@ -1,9 +1,5 @@
 import React, { useState, useMemo, useCallback } from "react";
-import {
-  Grid,
-  GridColumn,
-  type GridPageChangeEvent,
-} from "@progress/kendo-react-grid";
+import { Grid, GridColumn, GridToolbar, type GridPageChangeEvent } from "@progress/kendo-react-grid";
 
 import type { Product } from "../../model/IGrid";
 import productData from "../../data/products.json";
@@ -24,14 +20,18 @@ function Example3() {
 
   return (
     <div style={{ padding: 20 }}>
-      <h2>Grid - Pagination</h2>
       <Grid
         data={currentPageData}
         total={productData.length}
         skip={skip}
         pageable={{ buttonCount: 5, pageSizes: true, pageSize }}
         onPageChange={handlePageChange}
+        style={{ height: "400px" }}
       >
+        <GridToolbar>
+          <strong>KendoReact Grid - Pagination</strong>
+        </GridToolbar>
+
         <GridColumn field="id" title="ID" width="80px" />
         <GridColumn field="name" title="Product Name" />
         <GridColumn field="price" title="Price ($)" />

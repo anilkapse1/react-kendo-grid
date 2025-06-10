@@ -1,25 +1,13 @@
 import React, { useState, useMemo, useCallback } from "react";
-import {
-  Grid,
-  GridColumn,
-  type GridSortChangeEvent,
-  type GridFilterChangeEvent,
-} from "@progress/kendo-react-grid";
-import {
-  orderBy,
-  filterBy,
-  type SortDescriptor,
-  type CompositeFilterDescriptor,
-} from "@progress/kendo-data-query";
+import { Grid, GridColumn, type GridSortChangeEvent, type GridFilterChangeEvent, GridToolbar } from "@progress/kendo-react-grid";
+import { orderBy, filterBy, type SortDescriptor, type CompositeFilterDescriptor } from "@progress/kendo-data-query";
 
 import type { Product } from "../../model/IGrid";
 import productData from "../../data/products.json"; // Assuming this is well-typed
 
 function Example2() {
   const [sort, setSort] = useState<SortDescriptor[]>([]);
-  const [filter, setFilter] = useState<CompositeFilterDescriptor | undefined>(
-    undefined
-  );
+  const [filter, setFilter] = useState<CompositeFilterDescriptor | undefined>(undefined);
 
   const processedData = useMemo(() => {
     let data = productData as Product[]; // Ensure productData is treated as Product[]
@@ -41,8 +29,7 @@ function Example2() {
       !e.filter ||
       !e.filter.filters ||
       e.filter.filters.length === 0 ||
-      (e.filter.filters.length === 1 &&
-        (e.filter.filters[0] as CompositeFilterDescriptor).filters?.length === 0)
+      (e.filter.filters.length === 1 && (e.filter.filters[0] as CompositeFilterDescriptor).filters?.length === 0)
     ) {
       setFilter(undefined);
     } else {
@@ -53,16 +40,20 @@ function Example2() {
   // --- Render ---
   return (
     <div style={{ padding: 20 }}>
-      <h2>Grid - Sorting and Filtering</h2>
       <Grid
         data={processedData}
-        sortable={true} 
+        sortable={true}
         sort={sort}
         onSortChange={handleSortChange}
-        filterable={true} 
+        filterable={true}
         filter={filter}
         onFilterChange={handleFilterChange}
+        style={{ height: "400px" }}
       >
+        <GridToolbar>
+          <strong>KendoReact Grid - Sorting and Filtering</strong>
+        </GridToolbar>
+
         <GridColumn field="id" title="ID" width="80px" filter="numeric" />
         <GridColumn field="name" title="Product Name" filter="text" />
         <GridColumn field="price" title="Price ($)" filter="numeric" />
