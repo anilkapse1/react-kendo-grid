@@ -22,37 +22,30 @@ function Example2() {
 
   const processedData = useMemo(() => {
     let data = carData as Car[];
+    
     if (filter) {
       data = filterBy(data, filter);
     }
+    
     if (sort.length > 0) {
       data = orderBy(data, sort);
     }
+    
     return data;
-  }, [carData, filter, sort]);
+  }, [filter, sort]);
 
   const handleSortChange = useCallback((e: GridSortChangeEvent) => {
     setSort(e.sort);
   }, []);
 
   const handleFilterChange = useCallback((e: GridFilterChangeEvent) => {
-    if (
-      !e.filter ||
-      !e.filter.filters ||
-      e.filter.filters.length === 0 ||
-      (e.filter.filters.length === 1 &&
-        (e.filter.filters[0] as CompositeFilterDescriptor).filters?.length ===
-          0)
-    ) {
-      setFilter(undefined);
-    } else {
-      setFilter(e.filter);
-    }
+    setFilter(e.filter || undefined);
   }, []);
 
   return (
     <div>
       <h2>Sorting and Filtering</h2>
+      <p>Showing {processedData.length} of {carData.length} records</p>
       <Grid
         data={processedData}
         sortable={true}
@@ -61,12 +54,14 @@ function Example2() {
         filterable={true}
         filter={filter}
         onFilterChange={handleFilterChange}
+        style={{ height: '400px'}} 
+        resizable={true}
       >
-        <GridColumn field="id" title="ID" filter="numeric" />
+        <GridColumn field="id" title="ID" filter="numeric"/>
         <GridColumn field="brand" title="Brand" filter="text" />
-        <GridColumn field="model" title="Model" filter="text" />
-        <GridColumn field="year" title="Year" filter="text" />
-        <GridColumn field="color" title="Color" filter="text" />
+        <GridColumn field="model" title="Model" filter="text"  />
+        <GridColumn field="year" title="Year" filter="numeric"/>
+        <GridColumn field="color" title="Color" filter="text"  />
         <GridColumn field="price" title="Price" filter="numeric" />
       </Grid>
     </div>
